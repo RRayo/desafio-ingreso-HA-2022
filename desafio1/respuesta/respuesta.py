@@ -10,7 +10,6 @@ from collections import Counter
 
 # questions: memory restrictions?
 # questions: time restrictions?
-# questions: how many titans are there?
 # questions: el output debe especificar el día mes y año? ej día (369, 4) estaría bien?
 
 # read the file and save the data in a list
