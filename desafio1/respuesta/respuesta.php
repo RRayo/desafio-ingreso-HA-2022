@@ -51,16 +51,14 @@ function get_nearest_day($data, $condition = null)
         if (is_callable($condition) && !$condition($day)) {
             continue;
         }
-        if ($amount <= $least_amount) {
-            if ($amount < $least_amount) {
-                $least_amount = $amount;
-                $nearest_day = $day;
-            } elseif ($amount == $least_amount) {
-                // update the day if it is less than the current least common day
-                if ($day < $nearest_day) {
-                    $nearest_day = $day;
-                }
-            }
+        if ($amount > $least_amount) {
+            continue;
+        }
+        if ($amount < $least_amount) {
+            $least_amount = $amount;
+            $nearest_day = $day;
+        } elseif ($amount == $least_amount && $day < $nearest_day) {
+            $nearest_day = $day;
         }
     }
 
