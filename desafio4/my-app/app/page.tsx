@@ -116,7 +116,7 @@ export default function Home() {
                   <React.Fragment key={index}>
                     <div className="border-r border-black p-2">{resources[item.resource]}</div>
                     <div className="border-r border-black p-2">{item.quantity} {units[item.resource]}</div>
-                    <div className="border-r border-black p-2">{item.date.toLocaleDateString()}</div>
+                    <div className="border-r border-black p-2">{item.date.toISOString().slice(0, 10)}</div>
                     <div className="flex justify-center border-black p-2">
                       <button onClick={() => handleDeleteClick(index)} className='border-0'>
                         <span className="self-center">🗑️</span>
