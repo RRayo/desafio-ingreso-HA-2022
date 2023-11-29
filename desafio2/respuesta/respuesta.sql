@@ -56,7 +56,6 @@ ORDER BY cantidad DESC;
 
 
 -- Recurso que se utiliza más comúnmente para matar titanes de 9 metros, ordenado por cantidad de usos descendiente.
--- TODO revisar, no entiendo la pregunta: el recurso más usado o la lista de recursos usados?
 SELECT recursos.nombre, SUM(movimientos_recursos.cantidad) as cantidad, recursos.unidad
 FROM recursos
 JOIN movimientos_recursos ON recursos.id = movimientos_recursos.id_recurso
