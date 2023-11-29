@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+select, input, button {
+  border: 1px solid black;
+}
+
+html,
+body,
+main,
+div,
+a,
+label,
+form,
+button {
+  display: flex;
+  box-sizing: border-box;
+  /* align-items: stretch; */
+  flex-direction: column;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}

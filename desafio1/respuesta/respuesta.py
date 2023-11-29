@@ -16,6 +16,7 @@ from collections import Counter
 def read_file(file_name):
     data = []
     file = open(file_name, 'r')
+    # TODO check if the file is not empty and if the data is valid
     raw_data = json.load(file)
     for x, y in raw_data:
         data.extend(list(range(x, y)))
@@ -39,5 +40,7 @@ days_with_titans = read_file('desafio1\last_year.json')
 # ignore the months of january and december
 condition = lambda x: x%365 not in range(0, 31) and x%365 not in range(334, 365)
 
+# TODO check the case when there are no titans
+# TODO check the case when there are no dates in the range
 least_common = least_occurrences(days_with_titans, condition)
 print(least_common[0])
